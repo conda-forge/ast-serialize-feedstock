@@ -35,7 +35,7 @@ build:
           #  path too long:
           #    '%BUILD_PREFIX%/.cargo/git/checkouts/(~180 characters).snap'; class=Filesystem (30)
           - set CARGO_HOME=c:\.cg
-          - echo 'cargo auditable %%*'     >> "%BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat"
+          - echo "%BUILD_PREFIX%\Library\bin\cargo.exe auditable %%*" >> "%BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat"
         else:
           - echo "#!/usr/bin/env sh"       >> "${BUILD_PREFIX}/bin/cargo-auditable-wrapper"
           - echo 'exec cargo auditable $*' >> "${BUILD_PREFIX}/bin/cargo-auditable-wrapper"
