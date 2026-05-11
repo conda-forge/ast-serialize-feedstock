@@ -26,6 +26,8 @@ build:
       CARGO_PROFILE_RELEASE_LTO: fat
       CARGO_PROFILE_RELEASE_STRIP: symbols
       CARGO: cargo-auditable-wrapper${{ ".bat" if win }}
+      PYTHONIOENCODING: utf-8
+      PYTHONLEGACYTEXTENCODING: utf-8
     content:
       - if: win
         then:
