@@ -19,7 +19,7 @@ source:
   sha256: 5880091bfe6f4f986f22866375c2e884843e7a0b6343ae41aeea659613d879b6
 
 build:
-  number: 0
+  number: 1
   skip: is_abi3 and not is_python_min
   script:
     env:
