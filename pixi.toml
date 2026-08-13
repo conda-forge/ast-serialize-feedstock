@@ -5,7 +5,7 @@
 
 [workspace]
 name = "ast-serialize-feedstock"
-version = "2026.8.5"  # conda-smithy version used to generate this file
+version = "2026.8.9"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/ast-serialize-feedstock"
 authors = ["@conda-forge/ast-serialize"]
 channels = ["conda-forge"]
@@ -145,6 +145,24 @@ description = "Build ast-serialize-feedstock with variant win_64_is_abi3truepyth
 [feature.build.tasks."inspect-win_64_is_abi3truepython3.10.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_is_abi3truepython3.10.____cpython.yaml"
 description = "List contents of ast-serialize-feedstock packages built for variant win_64_is_abi3truepython3.10.____cpython"
+[feature.build.tasks."build-win_arm64_is_abi3falsepython3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_is_abi3falsepython3.14.____cp314t.yaml"
+description = "Build ast-serialize-feedstock with variant win_arm64_is_abi3falsepython3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-win_arm64_is_abi3falsepython3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_arm64_is_abi3falsepython3.14.____cp314t.yaml"
+description = "Build ast-serialize-feedstock with variant win_arm64_is_abi3falsepython3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_arm64_is_abi3falsepython3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_is_abi3falsepython3.14.____cp314t.yaml"
+description = "List contents of ast-serialize-feedstock packages built for variant win_arm64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-win_arm64_is_abi3truepython3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_is_abi3truepython3.14.____cp314.yaml"
+description = "Build ast-serialize-feedstock with variant win_arm64_is_abi3truepython3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-win_arm64_is_abi3truepython3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_arm64_is_abi3truepython3.14.____cp314.yaml"
+description = "Build ast-serialize-feedstock with variant win_arm64_is_abi3truepython3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-win_arm64_is_abi3truepython3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_is_abi3truepython3.14.____cp314.yaml"
+description = "List contents of ast-serialize-feedstock packages built for variant win_arm64_is_abi3truepython3.14.____cp314"
 
 [environments]
 build = ["build"]
