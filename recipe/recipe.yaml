@@ -19,7 +19,7 @@ source:
   sha256: 6c37c43e4004dfb42d321ddedc569dc17ff4259296f3af577c9ea46a809bc010
 
 build:
-  number: 0
+  number: 1
   skip: is_abi3 and not is_python_min
   script:
     env:
@@ -46,6 +46,10 @@ build:
 
 requirements:
   build:
+    - if: build_platform != host_platform
+      then:
+        - python
+        - cross-python_${{ host_platform }}
     - ${{ compiler("rust") }}
     - ${{ compiler("c") }}
     - ${{ stdlib("c") }}
