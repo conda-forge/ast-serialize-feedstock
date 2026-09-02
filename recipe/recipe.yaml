@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.0"
+  version: "0.9.0"
   python_check_max: "3.14"
   # rattler-build doesn't define SP_DIR during test, and chokes on strings starting with %
   unix_sp_dir: $(python -c "print(__import__('site').getsitepackages()[-1])")
@@ -16,10 +16,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/ast-serialize/ast_serialize-${{ version }}.tar.gz
-  sha256: 6c37c43e4004dfb42d321ddedc569dc17ff4259296f3af577c9ea46a809bc010
+  sha256: 79fe8be1c934aa572940d1811d8dbe4d1b6f22291e3f16755c9b062e9ac92fb7
 
 build:
-  number: 1
+  number: 0
   skip: is_abi3 and not is_python_min
   script:
     env:
