@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.12.0"
+  version: "0.12.1"
   python_check_max: "3.14"
   cargo_wrapper: cargo-auditable-wrapper${{ ".sh" if unix else ".bat" }}
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/ast-serialize/ast_serialize-${{ version }}.tar.gz
-  sha256: 080fa7e0393305b1c0565a79bdd6457de636fee4a07e02382eaa6ce583fc6375
+  sha256: 5285a390caf1c44368ae270f037f797b91427d138b7d43cad0f1fda4c83518d9
 
 build:
   number: 0
